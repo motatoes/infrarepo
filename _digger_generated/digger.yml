@@ -1,7 +1,7 @@
 project:
-  name: multib190e
+  name: test2afdb8
 services:
-  node4e81e: !!python/object/apply:builtins.dict
+  node9a542: !!python/object/apply:builtins.dict
   - alias: node
     build_command: null
     build_directory: null
@@ -11,31 +11,31 @@ services:
     internal: false
     lambda_handler: ''
     load_balancer: true
-    name: node4e81e
+    name: node9a542
     path: ./
-    pk: 456
+    pk: 1
     repository: motatoes/a-nodeapp
     repository_type: github
-    service_name: node4e81e
+    service_name: node9a542
     service_type: container
     task_cpu: '256'
     task_memory: '512'
-  qavir22fe6: !!python/object/apply:builtins.dict
-  - alias: public app
+  nodei4ed9f: !!python/object/apply:builtins.dict
+  - alias: node internal
     build_command: null
     build_directory: null
     container_port: '8080'
     dockerfile: ./Dockerfile
     health_check: /
-    internal: false
+    internal: true
     lambda_handler: ''
     load_balancer: true
-    name: qavir22fe6
+    name: nodei4ed9f
     path: ./
-    pk: 377
+    pk: 2
     repository: motatoes/a-nodeapp
     repository_type: github
-    service_name: qavir22fe6
+    service_name: nodei4ed9f
     service_type: container
     task_cpu: '256'
     task_memory: '512'
