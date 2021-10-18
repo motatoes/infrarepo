@@ -157,16 +157,3 @@ resource "aws_route_table_association" "publicb" {
   subnet_id      = aws_subnet.public_subnet_b.id
   route_table_id = aws_route_table.route_table_public.id
 }
-
-# output the vpc ids
-output "main_vpc_id" {
-  value = local.vpc.id
-}
-
-output "public_subnet_a_id" {
-  value = aws_subnet.public_subnet_a.id
-}
-
-output "public_subnet_b_id" {
-  value = aws_subnet.public_subnet_b.id
-}

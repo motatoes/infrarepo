@@ -1,4 +1,4 @@
-devd5f1e:
+qalon293f3: &id001
   acm_certificate_arn_virginia: null
   cloudfront_service_exists: false
   create_dns_record: false
@@ -8,3 +8,4 @@ devd5f1e:
   hostname: null
   lambda_service_exists: false
   lb_ssl_certificate_arn: null
+qavir1fb5c: *id001
