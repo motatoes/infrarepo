@@ -1,7 +1,26 @@
 project:
-  name: multib190e
+  name: real96c3a
 services:
-  node4e81e: !!python/object/apply:builtins.dict
+  inter4552c: !!python/object/apply:builtins.dict
+  - alias: internal
+    build_command: null
+    build_directory: null
+    container_port: '8080'
+    dockerfile: ./Dockerfile
+    health_check: /
+    internal: true
+    lambda_handler: ''
+    load_balancer: true
+    name: inter4552c
+    path: ./
+    pk: 5
+    repository: motatoes/a-nodeapp
+    repository_type: github
+    service_name: inter4552c
+    service_type: container
+    task_cpu: '256'
+    task_memory: '512'
+  node5aab3: !!python/object/apply:builtins.dict
   - alias: node
     build_command: null
     build_directory: null
@@ -11,31 +30,12 @@ services:
     internal: false
     lambda_handler: ''
     load_balancer: true
-    name: node4e81e
+    name: node5aab3
     path: ./
-    pk: 456
+    pk: 1
     repository: motatoes/a-nodeapp
     repository_type: github
-    service_name: node4e81e
-    service_type: container
-    task_cpu: '256'
-    task_memory: '512'
-  qavir22fe6: !!python/object/apply:builtins.dict
-  - alias: public app
-    build_command: null
-    build_directory: null
-    container_port: '8080'
-    dockerfile: ./Dockerfile
-    health_check: /
-    internal: false
-    lambda_handler: ''
-    load_balancer: true
-    name: qavir22fe6
-    path: ./
-    pk: 377
-    repository: motatoes/a-nodeapp
-    repository_type: github
-    service_name: qavir22fe6
+    service_name: node5aab3
     service_type: container
     task_cpu: '256'
     task_memory: '512'

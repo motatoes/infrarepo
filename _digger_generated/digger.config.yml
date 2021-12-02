@@ -1,11 +1,14 @@
-qalon293f3: &id001
-  acm_certificate_arn_virginia: null
+auto62f61: &id001
+  acm_certificate_arn_virginia: ''
   cloudfront_service_exists: false
   create_dns_record: false
-  dns_zone_id: null
+  dns_zone_id: ''
   eks_service_exists: false
   fargate_service_exists: true
   hostname: null
   lambda_service_exists: false
-  lb_ssl_certificate_arn: null
-qavir1fb5c: *id001
+  lb_ssl_certificate_arn: ''
+  peer_vpc: vpc-0df8046b9bb28be75
+  peer_vpc_region: us-east-1
+  service.node5aab3.use_subnets_cd: true
+irela52eea: *id001
