@@ -12,3 +12,5 @@ auto62f61: &id001
   peer_vpc_region: us-east-1
   service.node5aab3.use_subnets_cd: true
 irela52eea: *id001
+pr14ae8fe: *id001
+pr1745c8b: *id001

@@ -8,8 +8,12 @@
     service_vpc = local.vpc
     service_security_groups = [aws_security_group.ecs_service_sg.id]
     # image_tag_mutability
-    lb_subnet_a = aws_subnet.public_subnet_a
-    lb_subnet_b = aws_subnet.public_subnet_b
+
+    
+      lb_subnet_a = aws_subnet.public_subnet_c
+      lb_subnet_b = aws_subnet.public_subnet_d      
+    
+
     # lb_port
     # lb_protocol
 
@@ -39,7 +43,7 @@
     # lb_access_logs_expiration_days
     container_port = "8080"
     # replicas
-    container_name = "real96c3a-irela52eea-node5aab3"
+    container_name = "real96c3a-pr1745c8b-node5aab3"
     launch_type = "FARGATE"
     # ecs_autoscale_min_instances
     # ecs_autoscale_max_instances
@@ -53,8 +57,8 @@
     
 
 
-    task_cpu = "512" 
-    task_memory = "2048" 
+    task_cpu = "256" 
+    task_memory = "512" 
 
     
   }

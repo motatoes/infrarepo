@@ -37,5 +37,5 @@ services:
     repository_type: github
     service_name: node5aab3
     service_type: container
-    task_cpu: '256'
-    task_memory: '512'
+    task_cpu: '512'
+    task_memory: '2048'
