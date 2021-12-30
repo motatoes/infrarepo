@@ -51,6 +51,8 @@
     tags = var.tags
 
     
+      lb_ssl_certificate_arn = "arn:aws:acm:us-west-1:209539466991:certificate/5bbb9a61-adde-42bf-bd51-34b5522148db"
+    
 
 
     # for *.dggr.app listeners

@@ -8,8 +8,12 @@
     service_vpc = local.vpc
     service_security_groups = [aws_security_group.ecs_service_sg.id]
     # image_tag_mutability
-    lb_subnet_a = aws_subnet.public_subnet_a
-    lb_subnet_b = aws_subnet.public_subnet_b
+
+    
+      lb_subnet_a = aws_subnet.public_subnet_c
+      lb_subnet_b = aws_subnet.public_subnet_d      
+    
+
     # lb_port
     # lb_protocol
 
@@ -46,6 +50,8 @@
     default_backend_image = "quay.io/turner/turner-defaultbackend:0.2.0"
     tags = var.tags
 
+    
+      lb_ssl_certificate_arn = "arn:aws:acm:us-west-1:209539466991:certificate/5bbb9a61-adde-42bf-bd51-34b5522148db"
     
 
 
