@@ -41,7 +41,7 @@
     # health_check_timeout
     # health_check_matcher
     # lb_access_logs_expiration_days
-    container_port = "8080"
+    container_port = "8081"
     # replicas
     container_name = "real96c3a-irela52eea-node5aab3"
     launch_type = "FARGATE"

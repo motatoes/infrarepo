@@ -1,34 +1,17 @@
 project:
   name: real96c3a
 services:
-  inter4552c: !!python/object/apply:builtins.dict
-  - alias: internal
-    build_command: null
-    build_directory: null
-    container_port: '8080'
-    dockerfile: ./Dockerfile
-    health_check: /
-    internal: true
-    lambda_handler: ''
-    load_balancer: true
-    name: inter4552c
-    path: ./
-    pk: 5
-    repository: motatoes/a-nodeapp
-    repository_type: github
-    service_name: inter4552c
-    service_type: container
-    task_cpu: '256'
-    task_memory: '512'
   node5aab3: !!python/object/apply:builtins.dict
   - alias: node
     build_command: null
     build_directory: null
-    container_port: '8080'
+    container_port: '8081'
     dockerfile: ./Dockerfile
     health_check: /
     internal: false
     lambda_handler: ''
+    lambda_runtime: Node.js
+    lambda_runtime_aws_name: nodejs14.x
     load_balancer: true
     name: node5aab3
     path: ./
