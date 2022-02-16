@@ -1,15 +1,10 @@
-auto62f61: &id001
-  acm_certificate_arn_virginia: arn:aws:acm:us-east-1:209539466991:certificate/ca92ecfb-63e4-43ff-84e7-46a723449e42
-  cloudfront_service_exists: false
-  create_dns_record: false
-  dns_zone_id: null
+produ9b715:
+  cloudfront_service_exists: true
+  dggr_acm_certificate_arn: arn:aws:acm:us-west-2:209539466991:certificate/d2c986c5-6c6f-4642-abe5-2666fc3af7d8
+  dggr_acm_certificate_arn_virginia: arn:aws:acm:us-east-1:209539466991:certificate/587235f6-55cb-4737-8744-4f0031d1dc11
+  dggr_hostname: dggr.app
+  dggr_zone_id: Z01023802GBWXW1MRJGTO
   eks_service_exists: false
   fargate_service_exists: true
-  hostname: dggr.app
   lambda_service_exists: false
-  lb_ssl_certificate_arn: arn:aws:acm:us-west-1:209539466991:certificate/5bbb9a61-adde-42bf-bd51-34b5522148db
-  peer_vpc: vpc-0df8046b9bb28be75
-  peer_vpc_region: us-east-1
-  service.node5aab3.use_subnets_cd: true
-irela52eea: *id001
-pr14ae8fe: *id001
+  use_dggr_domain: true

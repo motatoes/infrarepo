@@ -1,24 +1,45 @@
 project:
-  name: real96c3a
+  name: medus4fa49
 services:
-  node5aab3: !!python/object/apply:builtins.dict
-  - alias: node
-    build_command: null
-    build_directory: null
-    container_port: '8081'
-    dockerfile: ./Dockerfile
-    health_check: /
+  adminbec85: !!python/object/apply:builtins.dict
+  - alias: admin
+    build_command: npm run build
+    build_directory: ./medusa-admin/public
+    container_port: null
+    dockerfile: null
+    health_check: null
     internal: false
     lambda_handler: ''
-    lambda_runtime: Node.js
-    lambda_runtime_aws_name: nodejs14.x
+    lambda_runtime: Docker
+    lambda_runtime_aws_name: Docker
     load_balancer: true
-    name: node5aab3
-    path: ./
-    pk: 1
-    repository: motatoes/a-nodeapp
+    name: adminbec85
+    path: ./medusa-admin
+    pk: 672
+    repository: diggerhq/medusa
     repository_type: github
-    service_name: node5aab3
+    service_name: adminbec85
+    service_type: webapp
+    task_cpu: '256'
+    task_memory: '512'
+  medus86d26: !!python/object/apply:builtins.dict
+  - alias: medusa backend
+    build_command: null
+    build_directory: null
+    container_port: '9000'
+    dockerfile: ./my-medusa-store/Dockerfile.prod
+    health_check: /health
+    internal: false
+    lambda_handler: ''
+    lambda_runtime: Docker
+    lambda_runtime_aws_name: Docker
+    load_balancer: true
+    name: medus86d26
+    path: ./my-medusa-store
+    pk: 671
+    repository: diggerhq/medusa
+    repository_type: github
+    service_name: medus86d26
     service_type: container
-    task_cpu: '512'
-    task_memory: '2048'
+    task_cpu: '256'
+    task_memory: '512'
