@@ -1,9 +1,9 @@
 
 locals {
-  function_name = "${var.project_name}-${var.environment}-lambd279ed"
+  function_name = "${var.project_name}-${var.environment}-testdac25"
 }
 
-data "aws_lambda_function" "lambd279ed" {
+data "aws_lambda_function" "testdac25" {
   function_name = local.function_name
 }
 
@@ -25,7 +25,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
   bucket = aws_s3_bucket.custom_s3_bucket.id
 
   lambda_function {
-    lambda_function_arn = data.aws_lambda_function.lambd279ed.arn
+    lambda_function_arn = data.aws_lambda_function.testdac25.arn
     events              = ["s3:ObjectCreated:*"]
     # filter_prefix       = "AWSLogs/"
     # filter_suffix       = ".log"
