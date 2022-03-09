@@ -1,45 +1,25 @@
 project:
-  name: medus4fa49
+  name: lambd279ed
 services:
-  adminbec85: !!python/object/apply:builtins.dict
-  - alias: admin
-    build_command: npm run build
-    build_directory: ./medusa-admin/public
+  testdac25: !!python/object/apply:builtins.dict
+  - alias: test
+    build_command: null
+    build_directory: null
     container_port: null
     dockerfile: null
     health_check: null
     internal: false
-    lambda_handler: ''
-    lambda_runtime: Docker
-    lambda_runtime_aws_name: Docker
+    lambda_handler: lambda.handler
+    lambda_runtime: Node.js
+    lambda_runtime_aws_name: nodejs14.x
     load_balancer: true
-    name: adminbec85
-    path: ./medusa-admin
-    pk: 672
-    repository: diggerhq/medusa
+    name: testdac25
+    path: ./
+    pk: 820
+    repository: motatoes/a-nodeapp
     repository_type: github
-    service_name: adminbec85
-    service_type: webapp
-    task_cpu: '256'
-    task_memory: '512'
-  medus86d26: !!python/object/apply:builtins.dict
-  - alias: medusa backend
-    build_command: null
-    build_directory: null
-    container_port: '9000'
-    dockerfile: ./my-medusa-store/Dockerfile.prod
-    health_check: /health
-    internal: false
-    lambda_handler: ''
-    lambda_runtime: Docker
-    lambda_runtime_aws_name: Docker
-    load_balancer: true
-    name: medus86d26
-    path: ./my-medusa-store
-    pk: 671
-    repository: diggerhq/medusa
-    repository_type: github
-    service_name: medus86d26
-    service_type: container
+    service_name: testdac25
+    service_type: serverless
+    standalone_task: false
     task_cpu: '256'
     task_memory: '512'
