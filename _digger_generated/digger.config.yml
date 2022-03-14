@@ -1,10 +1,10 @@
 produb6a51:
   cloudfront_service_exists: false
-  dggr_acm_certificate_arn: null
-  dggr_acm_certificate_arn_virginia: null
+  dggr_acm_certificate_arn: arn:aws:acm:us-east-1:209539466991:certificate/a4ffe0cf-2236-40e6-b34a-29a618ec1d67
+  dggr_acm_certificate_arn_virginia: arn:aws:acm:us-east-1:209539466991:certificate/a4ffe0cf-2236-40e6-b34a-29a618ec1d67
   dggr_hostname: dggr.app
-  dggr_zone_id: null
+  dggr_zone_id: Z01023802GBWXW1MRJGTO
   eks_service_exists: false
   fargate_service_exists: false
-  lambda_service_exists: true
-  use_dggr_domain: false
+  lambda_service_exists: false
+  use_dggr_domain: true

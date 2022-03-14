@@ -1,25 +1,3 @@
 project:
   name: lambd279ed
-services:
-  testdac25: !!python/object/apply:builtins.dict
-  - alias: test
-    build_command: null
-    build_directory: null
-    container_port: null
-    dockerfile: null
-    health_check: null
-    internal: false
-    lambda_handler: lambda.handler
-    lambda_runtime: Node.js
-    lambda_runtime_aws_name: nodejs14.x
-    load_balancer: true
-    name: testdac25
-    path: ./
-    pk: 820
-    repository: motatoes/a-nodeapp
-    repository_type: github
-    service_name: testdac25
-    service_type: serverless
-    standalone_task: false
-    task_cpu: '256'
-    task_memory: '512'
+services: {}
