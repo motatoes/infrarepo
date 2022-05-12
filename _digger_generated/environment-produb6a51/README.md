@@ -1,1 +1,0 @@
-Digger template for lambda functions

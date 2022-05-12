@@ -1,3 +1,26 @@
 project:
-  name: lambd279ed
-services: {}
+  name: nodeae550
+services:
+  node0789c: !!python/object/apply:builtins.dict
+  - alias: node
+    build_command: null
+    build_directory: null
+    container_port: '8080'
+    dockerfile: ./Dockerfile
+    health_check: /
+    internal: false
+    lambda_handler: ''
+    lambda_runtime: Docker
+    lambda_runtime_aws_name: Docker
+    load_balancer: true
+    name: node0789c
+    path: ./
+    pk: 923
+    repository: motatoes/a-nodeapp
+    repository_type: github
+    service_name: node0789c
+    service_type: container
+    standalone_task: false
+    task_cpu: '256'
+    task_memory: '512'
+    webapp_package_manager: npm
