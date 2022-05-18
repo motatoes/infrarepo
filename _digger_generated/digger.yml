@@ -24,3 +24,26 @@ services:
     task_cpu: '256'
     task_memory: '512'
     webapp_package_manager: npm
+  node6ca61: !!python/object/apply:builtins.dict
+  - alias: node
+    build_command: null
+    build_directory: null
+    container_port: '8080'
+    dockerfile: ./Dockerfile
+    health_check: /
+    internal: false
+    lambda_handler: ''
+    lambda_runtime: Docker
+    lambda_runtime_aws_name: Docker
+    load_balancer: true
+    name: node6ca61
+    path: ./
+    pk: 941
+    repository: motatoes/a-nodeapp
+    repository_type: gitlab
+    service_name: node6ca61
+    service_type: container
+    standalone_task: false
+    task_cpu: '256'
+    task_memory: '512'
+    webapp_package_manager: npm
