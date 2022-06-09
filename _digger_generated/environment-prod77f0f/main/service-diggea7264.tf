@@ -1,22 +1,21 @@
 
-module "monitoring-node6ca61" {
+module "monitoring-diggea7264" {
   count = var.monitoring_enabled ? 1 : 0
   source = "./monitoring"
   ecs_cluster_name = aws_ecs_cluster.app.name
-  ecs_service_name = "node6ca61"
+  ecs_service_name = "diggea7264"
   alarms_sns_topic_arn = var.alarms_sns_topic_arn
 }
 
 
-  module "service-node6ca61" {
+  module "service-diggea7264" {
     source = "../module-fargate-service"
 
     ecs_cluster = aws_ecs_cluster.app
-    service_name = "node6ca61"
+    service_name = "diggea7264"
     region = var.region
     service_vpc = local.vpc
     service_security_groups = [aws_security_group.ecs_service_sg.id]
-    lb_enable_https_redirect = var.lb_enable_https_redirect
     # image_tag_mutability
 
     
@@ -51,9 +50,9 @@ module "monitoring-node6ca61" {
     # health_check_timeout
     # health_check_matcher
     # lb_access_logs_expiration_days
-    container_port = "8080"
+    container_port = "3000"
     # replicas
-    container_name = "nodeae550-nodeed82e-node6ca61"
+    container_name = "diggeb374b-prod77f0f-diggea7264"
     launch_type = "FARGATE"
     # ecs_autoscale_min_instances
     # ecs_autoscale_max_instances
@@ -61,7 +60,7 @@ module "monitoring-node6ca61" {
     tags = var.tags
 
     
-      lb_ssl_certificate_arn = "arn:aws:acm:us-east-1:209539466991:certificate/cb409769-be79-4100-94ae-ac182c418d66"
+      lb_ssl_certificate_arn = "arn:aws:acm:us-east-1:739940681129:certificate/a0adf19c-75bc-49fe-812c-903e3a2fd6a9"
     
 
 
@@ -84,23 +83,23 @@ module "monitoring-node6ca61" {
   # *.dggr.app domains
   
 
-  output "node6ca61_docker_registry" {
-    value = module.service-node6ca61.docker_registry
+  output "diggea7264_docker_registry" {
+    value = module.service-diggea7264.docker_registry
   }
 
-  output "node6ca61_lb_dns" {
-    value = module.service-node6ca61.lb_dns
+  output "diggea7264_lb_dns" {
+    value = module.service-diggea7264.lb_dns
   }
 
-  output "node6ca61_lb_arn" {
-    value = module.service-node6ca61.lb_arn
+  output "diggea7264_lb_arn" {
+    value = module.service-diggea7264.lb_arn
   }
 
-  output "node6ca61_lb_http_listener_arn" {
-    value = module.service-node6ca61.lb_http_listener_arn
+  output "diggea7264_lb_http_listener_arn" {
+    value = module.service-diggea7264.lb_http_listener_arn
   }
 
-  output "node6ca61" {
+  output "diggea7264" {
     value = ""
   }
 

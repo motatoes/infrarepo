@@ -94,9 +94,7 @@ variable "lb_access_logs_expiration_days" {
   default = "3"
 }
 
-variable "lb_enable_https_redirect" {
-  default = false
-}
+
 
 # === Container ===
 
