@@ -1,18 +1,18 @@
 
-module "monitoring-nodea6a056" {
+module "monitoring-testb3047" {
   count = var.monitoring_enabled ? 1 : 0
   source = "./monitoring"
   ecs_cluster_name = aws_ecs_cluster.app.name
-  ecs_service_name = "nodea6a056"
+  ecs_service_name = "testb3047"
   alarms_sns_topic_arn = var.alarms_sns_topic_arn
 }
 
 
-  module "service-nodea6a056" {
+  module "service-testb3047" {
     source = "../module-fargate-service"
 
     ecs_cluster = aws_ecs_cluster.app
-    service_name = "nodea6a056"
+    service_name = "testb3047"
     region = var.region
     service_vpc = local.vpc
     service_security_groups = [aws_security_group.ecs_service_sg.id]
@@ -52,7 +52,7 @@ module "monitoring-nodea6a056" {
     # lb_access_logs_expiration_days
     container_port = "8080"
     # replicas
-    container_name = "nodea39b21-nodeafc8c7-nodea6a056"
+    container_name = "test1a9ae-test042b8-testb3047"
     launch_type = "FARGATE"
     # ecs_autoscale_min_instances
     # ecs_autoscale_max_instances
@@ -64,7 +64,7 @@ module "monitoring-nodea6a056" {
 
     # for *.dggr.app listeners
     
-      dggr_acm_certificate_arn = "arn:aws:acm:us-east-1:209539466991:certificate/9b56736a-1b97-4ef4-a700-764d0c2a9d96"
+      dggr_acm_certificate_arn = "arn:aws:acm:us-east-1:739940681129:certificate/20be5ea8-0082-4346-90be-9890f94f10a0"
     
 
 
@@ -82,45 +82,45 @@ module "monitoring-nodea6a056" {
 
   # *.dggr.app domains
    
-    resource "aws_route53_record" "nodea6a056_dggr_r53" {
+    resource "aws_route53_record" "testb3047_dggr_r53" {
       provider = aws.digger
       zone_id = "Z01023802GBWXW1MRJGTO"
-      name    = "nodea39b21-nodeafc8c7-nodea6a056.dggr.app"
+      name    = "test1a9ae-test042b8-testb3047.dggr.app"
       type    = "A"
 
       alias {
-        name                   = module.service-nodea6a056.lb_dns
-        zone_id                = module.service-nodea6a056.lb_zone_id
+        name                   = module.service-testb3047.lb_dns
+        zone_id                = module.service-testb3047.lb_zone_id
         evaluate_target_health = false
       }
     }
 
-    output "nodea6a056_dggr_domain" {
-        value = aws_route53_record.nodea6a056_dggr_r53.fqdn
+    output "testb3047_dggr_domain" {
+        value = aws_route53_record.testb3047_dggr_r53.fqdn
     }
   
 
-  output "nodea6a056_docker_registry" {
-    value = module.service-nodea6a056.docker_registry
+  output "testb3047_docker_registry" {
+    value = module.service-testb3047.docker_registry
   }
 
-  output "nodea6a056_lb_dns" {
-    value = module.service-nodea6a056.lb_dns
+  output "testb3047_lb_dns" {
+    value = module.service-testb3047.lb_dns
   }
 
-  output "nodea6a056_task_security_group_id" {
-    value = module.service-nodea6a056.task_security_group_id
+  output "testb3047_task_security_group_id" {
+    value = module.service-testb3047.task_security_group_id
   }
 
-  output "nodea6a056_lb_arn" {
-    value = module.service-nodea6a056.lb_arn
+  output "testb3047_lb_arn" {
+    value = module.service-testb3047.lb_arn
   }
 
-  output "nodea6a056_lb_http_listener_arn" {
-    value = module.service-nodea6a056.lb_http_listener_arn
+  output "testb3047_lb_http_listener_arn" {
+    value = module.service-testb3047.lb_http_listener_arn
   }
 
-  output "nodea6a056" {
+  output "testb3047" {
     value = ""
   }
 
