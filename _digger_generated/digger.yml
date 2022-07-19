@@ -1,25 +1,26 @@
 project:
-  name: diggeb374b
+  name: nodea39b21
 services:
-  diggea7264: !!python/object/apply:builtins.dict
-  - alias: digger-site
+  nodea6a056: !!python/object/apply:builtins.dict
+  - alias: nodeapp
     build_command: null
     build_directory: null
-    container_port: '3000'
+    container_port: '8080'
     dockerfile: ./Dockerfile
     health_check: /
+    health_check_matcher: null
     internal: false
     is_repo_publicly_accessible: false
     lambda_handler: ''
     lambda_runtime: Docker
     lambda_runtime_aws_name: Docker
     load_balancer: true
-    name: diggea7264
+    name: nodea6a056
     path: ./
-    pk: 875
-    repository: diggerhq/website
+    pk: 1191
+    repository: diggerhq/a-nodeapp
     repository_type: github
-    service_name: diggea7264
+    service_name: nodea6a056
     service_type: container
     standalone_task: false
     task_cpu: '256'

@@ -225,8 +225,3 @@ output "private_subnet_ids" {
 output "public_subnet_ids" {
   value = [aws_subnet.public_subnet_a.id, aws_subnet.public_subnet_b.id]
 }
-
-
-output "security_group_ids" {
-  value = [aws_security_group.ecs_service_sg.id]
-}

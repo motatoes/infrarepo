@@ -45,8 +45,10 @@ terraform {
 provider "aws" {
   region  = var.region
   # profile = var.aws_profile
+  
   access_key = var.aws_key
-  secret_key = var.aws_secret  
+  secret_key = var.aws_secret
+  
 }
 
 # digger account provider
@@ -57,4 +59,3 @@ provider "aws" {
   access_key = var.digger_aws_key
   secret_key = var.digger_aws_secret  
 }
-
