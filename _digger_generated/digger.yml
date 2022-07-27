@@ -1,8 +1,8 @@
 project:
-  name: test1a9ae
+  name: nodea39b21
 services:
-  testb3047: !!python/object/apply:builtins.dict
-  - alias: test
+  nodea6a056: !!python/object/apply:builtins.dict
+  - alias: nodeapp
     build_command: null
     build_directory: null
     container_port: '8080'
@@ -15,12 +15,12 @@ services:
     lambda_runtime: Docker
     lambda_runtime_aws_name: Docker
     load_balancer: true
-    name: testb3047
+    name: nodea6a056
     path: ./
-    pk: 1188
-    repository: motatoes/a-nodeapp
+    pk: 1191
+    repository: diggerhq/a-nodeapp
     repository_type: github
-    service_name: testb3047
+    service_name: nodea6a056
     service_type: container
     standalone_task: false
     task_cpu: '256'
